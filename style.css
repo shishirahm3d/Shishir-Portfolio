@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    position: relative;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid red;
+}
+
+/* Home */
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 950px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(red, green, blue, alpha);
+    color: white;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("./src/background.jpg");
+    height: 1000px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.heading {
+    color: white;
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    transform: scale(1, 1.1);
+}
+
+/* About Me */
+#about {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000dc;
+}
+
+#about h1 {
+    display: flex;
+    color: white;
+    margin: 30px;
+}
+
+.about {
+    display: flex;
+    border-radius: 20px;
+}
+
+.about img {
+    width: 450px;
+    height: 450px;
+    
+}
+
+.name {
+    height: 380px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    margin-left: 10px;
+}
+
+.name h2 {
+    font-size: 2.5rem;
+    color: yellowgreen;
+}
+
+.name p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+/* Career Objective */
+#career {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000dc;
+}
+
+.careerobjective {
+    height: 200px;
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.careerobjective h2 {
+    font-size: 2.5rem;
+    color: yellowgreen;
+}
+
+.careerobjective p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+
+
+
+/* Education */
+#education {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000dc;
+}
+
+#education h1 {
+    margin: 40px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.box {
+    height: 200px;
+    width: 550px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 50px;
+}
+
+.box h2 {
+    color: yellowgreen;
+    font-size: 2rem;
+}
+
+.box h3 {
+    color: yellowgreen;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+
+/* Career Objective */
+#skills {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000dc;
+}
+
+#skills h1 {
+    margin: 40px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.box {
+    height: 200px;
+    width: 550px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 50px;
+}
+
+.box h2 {
+    color: yellowgreen;
+    font-size: 2rem;
+}
+
+.box h3 {
+    color: yellowgreen;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* View Change 1366px */
+@media only screen and (max-width: 1366px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        align-items: center;
+        position: relative;
+    }
+
+    #home::before {
+        height: 700px;
+        width: 100%;
+    }
+
+}
+
+
+/* View Change 768px */
