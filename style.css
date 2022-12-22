@@ -10,41 +10,47 @@ html {
 /* Navbar */
 .navbar {
     display: flex;
+    background-color: #333;
     justify-content: center;
+    top: 0;
     height: 50px;
+    width: 100%;
     align-items: center;
-    position: relative;
+    position: fixed;
+    z-index: 1;
 }
 
-.navbar::before {
+.navbar::after {
     content: "";
-    position: absolute;
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+    position: fixed;
+    z-index: 1;
 }
 
 .navbar ul {
     display: flex;
     list-style: none;
+    position: fixed;
 }
 
 .navbar ul li a {
     padding: 10px 20px;
     text-decoration: none;
     color: white;
+    font-size: 1.2rem;
 }
 
 .navbar ul li a:hover {
-    border-bottom: 2px solid red;
+    background: #ddd;
+    color: black;
+    border-bottom: 4px solid yellowgreen;
 }
+
 
 /* Home */
 #home {
     display: flex;
     flex-direction: column;
-    height: 950px;
+    height: 1050px;
     justify-content: center;
     align-items: center;
     background-color: rgba(red, green, blue, alpha);
@@ -59,8 +65,27 @@ html {
     background: url("./src/background.jpg");
     height: 1000px;
     width: 100%;
+    margin-top: 50px;
     z-index: -1;
-    opacity: 0.8;
+
+}
+
+#home h1 {
+    color: whitesmoke;
+}
+
+/* Social links */
+.iconarea {
+
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: white;
+}
+
+.iconarea a {
+    padding: 5px 5px;
+
 }
 
 .heading {
@@ -75,7 +100,7 @@ html {
 #about {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 650px;
     justify-content: center;
     align-items: center;
     background-color: #000000dc;
@@ -89,13 +114,14 @@ html {
 
 .about {
     display: flex;
-    border-radius: 20px;
+
 }
 
 .about img {
     width: 450px;
     height: 450px;
-    
+    border-radius: 20px;
+
 }
 
 .name {
@@ -108,12 +134,12 @@ html {
 }
 
 .name h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: yellowgreen;
 }
 
 .name p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: white;
 }
 
@@ -148,13 +174,11 @@ html {
 
 
 
-
-
 /* Education */
 #education {
     display: flex;
     flex-direction: column;
-    height: 1000px;
+    height: 950px;
     justify-content: center;
     align-items: center;
     background-color: #000000dc;
@@ -169,7 +193,7 @@ html {
     grid-template-columns: auto auto;
 }
 
-.box {
+.boxeducation {
     height: 200px;
     width: 550px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -178,29 +202,29 @@ html {
     padding: 50px;
 }
 
-.box h2 {
+.boxeducation h2 {
     color: yellowgreen;
     font-size: 2rem;
 }
 
-.box h3 {
+.boxeducation h3 {
     color: yellowgreen;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-.box p {
+.boxeducation p {
     color: white;
     font-size: 1.2rem;
 }
 
 
 
-/* Career Objective */
+/* Skills, Hobies & Interests */
 #skills {
     display: flex;
     flex-direction: column;
-    height: 1000px;
+    height: 900px;
     justify-content: center;
     align-items: center;
     background-color: #000000dc;
@@ -215,60 +239,476 @@ html {
     grid-template-columns: auto auto;
 }
 
-.box {
-    height: 200px;
-    width: 550px;
+.boxskills {
+    height: 400px;
+    width: 400px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     margin: 20px;
     padding: 50px;
 }
 
-.box h2 {
+.boxskills h2 {
     color: yellowgreen;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
-.box h3 {
-    color: yellowgreen;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.box p {
+.boxskills p {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.boxskills li {
+    color: white;
+    font-size: 1.5rem;
 }
 
 
+/* Contact */
+#contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000dc;
+}
+
+#contact h1 {
+    margin: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    padding: 15px 20px;
+    margin: 15px;
+    width: 26%;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+}
+
+#message {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#submit {
+    padding: 15px 20px;
+    margin: 30px;
+    width: 15%;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+#submit:hover {
+    background: #ddd;
+    color: yellowgreen;
+    cursor: pointer;
+}
+
+/* Footer */
+.color {
+    background-color: black;
+    color: yellowgreen;
+    text-align: center;
+}
 
 
-
-
-
-
-
-
-
-
-
-
+/* Responsive For All Device */
 /* View Change 1366px */
-@media only screen and (max-width: 1366px) {
-    .navbar {
-        display: flex;
-        justify-content: center;
-        height: 50px;
-        align-items: center;
-        position: relative;
+@media only screen and (max-width: 1600px) {
+
+    /* Navbar */
+    .navbar ul li a {
+        font-size: 1.2rem;
+    }
+
+    .navbar ul li a:hover {
+        border-bottom: 4px solid yellowgreen;
+    }
+
+    /* Home */
+    #home {
+        height: 780px;
+
     }
 
     #home::before {
-        height: 700px;
-        width: 100%;
+        height: 730px;
+        background: url("./src/background1366.jpg");
     }
 
+    /* About Me */
+
+    #about {
+        height: 470px;
+    }
+
+    #about h1 {
+        display: flex;
+        color: white;
+        margin: 10px;
+    }
+
+    .about img {
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+    }
+
+    .name {
+        height: 240px;
+        width: 300x;
+    }
+
+    .name h2 {
+        font-size: 1.5rem;
+
+    }
+
+    .name p {
+        font-size: 1.2rem;
+    }
+
+
+    /* Career Objective */
+    #career {
+        height: 110px;
+    }
+
+    .careerobjective {
+        height: 170px;
+        width: 600px;
+    }
+
+    .careerobjective h2 {
+        font-size: 1.5rem;
+    }
+
+    .careerobjective p {
+        font-size: 1.2rem;
+        ;
+    }
+
+    /* Education */
+    #education {
+        height: 650px;
+    }
+
+    #education h1 {
+        margin: 15px;
+    }
+
+    .columns {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .boxeducation {
+        height: 180px;
+        width: 400px;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .boxeducation h2 {
+
+        font-size: 1.5rem;
+    }
+
+    .boxeducation p {
+        font-size: 1rem;
+    }
+
+    /* Skills, Hobies & Interests */
+    #skills {
+        height: 650px;
+
+    }
+
+    #skills h1 {
+        margin: 30px;
+    }
+
+    .columns {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .boxskills {
+        height: 290px;
+        width: 280px;
+        margin: 15px;
+        padding: 30px;
+    }
+
+    .boxskills h2 {
+        font-size: 2rem;
+    }
+
+    .boxskills p {
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .boxskills li {
+        font-size: 1rem;
+    }
+
+    /* Contact */
+    #contact {
+        height: 680px;
+        padding: 50px;
+    }
+
+    #contact h1 {
+        margin: 30px;
+    }
+
+    .input {
+        padding: 15px 30px;
+        margin: 15px;
+        width: 35%;
+        border-radius: 20px;
+    }
+
+    #message {
+        margin: 15px;
+        padding: 10px;
+        height: 150px;
+        width: 500px;
+        border-radius: 20px;
+    }
+
+    #submit {
+        padding: 15px 20px;
+        margin: 30px;
+        width: 15%;
+        border-radius: 20px;
+        font-size: 1.2rem;
+    }
 }
 
 
-/* View Change 768px */
+
+/* View Change 786px */
+@media only screen and (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        height: 50px;
+        width: 786px;
+
+    }
+
+    .navbar::after {
+        width: 786px;
+        position: center;
+
+    }
+
+    .navbar ul li a {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+
+    .navbar ul li a:hover {
+        border-bottom: 4px solid yellowgreen;
+    }
+
+    /* Home */
+    #home {
+        display: flex;
+        flex-direction: column;
+        height: 590px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #home::before {
+        position: left;
+        background: url("./src/background800.jpg");
+        height: 540px;
+        width: 768px;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+        padding-left: 393px;
+    }
+
+    /* About Me */
+    #about {
+        height: 400px;
+        width: 768px;
+
+    }
+
+    #about h1 {
+        margin: 30px;
+    }
+
+    .about img {
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+
+    }
+
+    .name {
+        height: 240px;
+        width: 240px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 30px;
+        margin-left: 10px;
+    }
+
+    .name h2 {
+        font-size: 1.3rem;
+    }
+
+    .name p {
+        font-size: 1rem;
+    }
+
+    /* Career Objective */
+    #career {
+        height: 215px;
+        width: 786px;
+    }
+
+    .careerobjective {
+        height: 120px;
+        width: 380px;
+        border-radius: 20px;
+        padding: 30px;
+    }
+
+    .careerobjective h2 {
+        font-size: 1.3rem;
+        color: yellowgreen;
+    }
+
+    .careerobjective p {
+        font-size: 1rem;
+        color: white;
+    }
+
+    /* Education */
+    #education {
+        height: 750px;
+        width: 768px;
+    }
+
+    #education h1 {
+        margin: 20px;
+
+    }
+
+    .boxeducation {
+        height: 200px;
+        width: 250px;
+        padding: 40px;
+    }
+
+    .boxeducation h2 {
+        font-size: 1.3rem;
+    }
+
+    .boxeducation h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .boxeducation p {
+        font-size: 0.9rem;
+    }
+
+    /* Skills, Hobies & Interests */
+    #skills {
+        display: flex;
+        flex-direction: column;
+        height: 650px;
+        width: 786px;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000dc;
+    }
+
+    #skills h1 {
+        margin: 30px;
+    }
+
+    .boxskills {
+        height: 270px;
+        width: 200px;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 40px;
+    }
+
+    .boxskills h2 {
+        font-size: 1.8rem;
+    }
+
+    .boxskills p {
+        font-size: 1rem;
+    }
+
+    .boxskills li {
+        font-size: 1rem;
+    }
+
+    /* Contact */
+    #contact {
+        height: 750px;
+        width: 786px;
+    }
+
+    #contact h1 {
+        margin: 50px;
+
+    }
+
+    .input {
+        padding: 15px 150px;
+        margin: 15px;
+        width: 30%;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+    }
+
+    #message {
+        margin: 15px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    #submit {
+        padding: 15px 20px;
+        margin: 30px;
+        width: 15%;
+        border-radius: 20px;
+        font-size: 1.2rem;
+    }
+
+    /* Footer */
+    .color {
+        width: 786px;
+    }
+
+
+
+
+}
