@@ -130,7 +130,7 @@ export function Sidebar() {
           {[
             { icon: Github, href: "https://github.com/shishirahm3d", color: "hover:text-gray-300" },
             { icon: Linkedin, href: "https://www.linkedin.com/in/shishir-ahmed-midul", color: "hover:text-blue-400" },
-            { icon: Twitter, href: "https://twitter.com/shishirahm3d", color: "hover:text-sky-400" },
+            { icon: Twitter, href: "https://x.com/shishir_ahm3d", color: "hover:text-sky-400" },
           ].map((social, index) => (
             <a
               key={index}
