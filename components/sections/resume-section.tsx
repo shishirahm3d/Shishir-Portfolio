@@ -20,12 +20,12 @@ const experience = [
 ]
 
 const skills = [
-  { name: "Frontend Development", level: 90, color: "from-blue-500 to-cyan-500" },
-  { name: "Backend Development", level: 85, color: "from-green-500 to-emerald-500" },
-  { name: "Programming Languages", level: 95, color: "from-purple-500 to-pink-500" },
-  { name: "Database Management", level: 85, color: "from-orange-500 to-red-500" },
-  { name: "User Interface Design", level: 85, color: "from-indigo-500 to-purple-500" },
-  { name: "Artificial Intelligence", level: 90, color: "from-teal-500 to-blue-500" },
+  { name: "Frontend Development", level: 95, color: "from-blue-500 to-cyan-500" },
+  { name: "Backend Development", level: 90, color: "from-green-500 to-emerald-500" },
+  { name: "Programming Languages", level: 80, color: "from-purple-500 to-pink-500" },
+  { name: "Database Management", level: 90, color: "from-orange-500 to-red-500" },
+  { name: "User Interface Design", level: 95, color: "from-indigo-500 to-purple-500" },
+  { name: "Artificial Intelligence", level: 85, color: "from-teal-500 to-blue-500" },
 ]
 
 const languages = [
