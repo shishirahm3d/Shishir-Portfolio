@@ -36,8 +36,8 @@ const languages = [
 
 export function ResumeSection() {
   return (
-    <Card className="glass border-white/10 p-8">
-      <div className="space-y-12">
+    <Card className="glass border-white/10 p-8 animate-in fade-in-0 duration-500">
+      <div className="space-y-6">
         {/* Header */}
         <div>
           <h2 className="text-2xl font-semibold text-white mb-4">Resume</h2>

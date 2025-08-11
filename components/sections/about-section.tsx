@@ -30,8 +30,8 @@ const services = [
 export function AboutSection() {
 
   return (
-    <Card className="glass border-white/10 p-8">
-      <div className="space-y-12">
+    <Card className="glass border-white/10 p-8 animate-in fade-in-0 duration-500">
+      <div className="space-y-4">
         {/* Header */}
         <div>
           <h2 className="text-2xl font-semibold text-white mb-4">About Me</h2>

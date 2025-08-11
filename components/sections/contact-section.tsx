@@ -41,7 +41,7 @@ export function ContactSection() {
   }
 
   return (
-    <Card className="glass border-white/10 p-8">
+    <Card className="glass border-white/10 p-8 animate-in fade-in-0 duration-500">
       <div className="space-y-8">
         {/* Header */}
         <div>
