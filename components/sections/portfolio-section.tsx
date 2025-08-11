@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Eye, ChevronDown, ExternalLink, X } from "lucide-react"
+import { ChevronDown, Eye } from "lucide-react"
 
 type Category = "all" | "web design" | "applications" | "web development"
 
@@ -32,6 +32,20 @@ const projects: Project[] = [
     image: "project-2.png",
     link: "https://github.com/shishirahm3d/blood-heroes",
   },
+  {
+    id: 3,
+    title: "Discord Music Bot",
+    category: "applications",
+    image: "project-3.png",
+    link: "https://github.com/shishirahm3d/bfl-music-bot",
+  },
+  {
+    id: 4,
+    title: "AI Lawyer",
+    category: "web development",
+    image: "project-4.png",
+    link: "https://ailawyerbd.shishirahmed.me/",
+  },
 ]
 
 const categories: { id: Category; label: string; count: number }[] = [
@@ -48,22 +62,10 @@ const categories: { id: Category; label: string; count: number }[] = [
 export function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState<Category>("all")
   const [isSelectOpen, setIsSelectOpen] = useState(false)
-  const [modalImage, setModalImage] = useState<string | null>(null)
-  const [modalTitle, setModalTitle] = useState<string>("")
 
   const filteredProjects = projects.filter((project) => activeCategory === "all" || project.category === activeCategory)
 
   const activeCategoryData = categories.find((cat) => cat.id === activeCategory)
-
-  const openImageModal = (imageSrc: string, title: string) => {
-    setModalImage(imageSrc)
-    setModalTitle(title)
-  }
-
-  const closeImageModal = () => {
-    setModalImage(null)
-    setModalTitle("")
-  }
 
   return (
     <Card className="glass border-white/10 p-8">
@@ -137,74 +139,38 @@ export function PortfolioSection() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <Card
+            <div
               key={project.id}
-              className="glass border-white/10 overflow-hidden group hover:shadow-xl transition-all duration-300 bg-white/5 backdrop-blur-sm"
+              className="group cursor-pointer"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover transition-all duration-500 group-hover:scale-105"
+                  className="object-cover transition-all duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex gap-3">
-                    <button
-                      onClick={() => openImageModal(project.image, project.title)}
-                      className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200 shadow-lg"
-                    >
-                      <Eye className="w-5 h-5 text-gray-800" />
-                    </button>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200 shadow-lg"
-                    >
-                      <ExternalLink className="w-5 h-5 text-gray-800" />
-                    </a>
-                  </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-14 h-14 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200 shadow-lg border border-white/20"
+                  >
+                    <Eye className="w-6 h-6 text-gray-800" />
+                  </a>
                 </div>
               </div>
-              <div className="px-6 pb-6">
-                <h3 className="font-semibold text-white text-lg mb-2 leading-tight">{project.title}</h3>
-                <p className="text-white/60 text-sm capitalize">{project.category}</p>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Image Modal */}
-        {modalImage && (
-          <div 
-            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-            onClick={closeImageModal}
-          >
-            <div className="relative max-w-4xl max-h-full w-full h-full flex items-center justify-center">
-              <button
-                onClick={closeImageModal}
-                className="absolute top-4 right-4 z-10 w-10 h-10 glass rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-              <div 
-                className="relative w-full h-full max-w-3xl max-h-[80vh] bg-white/5 rounded-lg overflow-hidden"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Image
-                  src={modalImage}
-                  alt={modalTitle}
-                  fill
-                  className="object-contain"
-                />
+              <div className="mt-6">
+                <h3 className="font-semibold text-white text-lg tracking-tight">{project.title}</h3>
+                <p className="text-white/50 text-sm capitalize font-medium">{project.category}</p>
               </div>
             </div>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     </Card>
   )
