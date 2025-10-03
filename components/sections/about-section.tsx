@@ -42,7 +42,7 @@ export function AboutSection() {
         <div className="space-y-4 text-white/80 leading-relaxed text-justify">
           <p>
             I'm a passionate <span className="text-gradient font-medium">Full-Stack Developer</span> and{" "}
-            <span className="text-gradient font-medium">AI Prompt Engineer</span> from Dhaka, Bangladesh, specializing in 
+            <span className="text-gradient font-medium">AI & Prompt Engineer</span> from Dhaka, Bangladesh, specializing in 
             modern web technologies and intelligent systems. I love crafting digital solutions that bridge the gap between 
             cutting-edge technology and user-centered design.
           </p>
